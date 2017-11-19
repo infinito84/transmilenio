@@ -11,16 +11,17 @@ solution.forEach(route =>{
 		let b = route[i+1].station;
 		restrictions[a] = restrictions[a] || {};
 		restrictions[a][b] = 1;
-		let howMany = Object.keys(a).length ;
+		let howMany = Object.keys(restrictions[a]).length ;
 		if(howMany > max){
 			max = howMany;
 			whoMax = a;
+			console.log(whoMax, max);
 		}
 	}
 });
 
 console.log('The station with most available transshipments is: '+ whoMax +' with: '+ max);
-fs.writeFile('../restrictions.json', JSON.stringify(restrictions), (err) => {
+fs.writeFile('../restrictions.json', JSON.stringify(restrictions, null,'\t'), (err) => {
 	if(err) return console.error(err);
 	console.log('Restrictions saved')
 })

@@ -1,0 +1,1356 @@
+{
+	"trunks": {
+		"1": {
+			"id": "1",
+			"name": "Caracas",
+			"color": "#00398B",
+			"stations": [
+				"TM0001",
+				"TM0002",
+				"TM0003",
+				"TM0004",
+				"TM0005",
+				"TM0006",
+				"TM0007",
+				"TM0008",
+				"TM0009",
+				"TM0010",
+				"TM0011",
+				"TM0012",
+				"TM0013",
+				"TM0014"
+			],
+			"peakLoad": 48000,
+			"passengers": 520880,
+			"length": 8.1
+		},
+		"2": {
+			"id": "2",
+			"name": "Autonorte",
+			"color": "#95B734",
+			"stations": [
+				"TM0031",
+				"TM0030",
+				"TM0029",
+				"TM0028",
+				"TM0027",
+				"TM0026",
+				"TM0025",
+				"TM0024",
+				"TM0023",
+				"TM0022",
+				"TM0021",
+				"TM0020",
+				"TM0019",
+				"TM0018",
+				"TM0017",
+				"TM0016",
+				"TM0015"
+			],
+			"peakLoad": 39600,
+			"passengers": 335700,
+			"length": 10.3
+		},
+		"3": {
+			"id": "3",
+			"name": "Suba",
+			"color": "#EABF3B",
+			"stations": [
+				"TM0045",
+				"TM0044",
+				"TM0043",
+				"TM0042",
+				"TM0041",
+				"TM0040",
+				"TM0039",
+				"TM0038",
+				"TM0037",
+				"TM0036",
+				"TM0035",
+				"TM0034",
+				"TM0033",
+				"TM0032"
+			],
+			"peakLoad": 20100,
+			"passengers": 121438,
+			"length": 13
+		},
+		"4": {
+			"id": "4",
+			"name": "Calle 80",
+			"color": "#7B6CA7",
+			"stations": [
+				"TM0046",
+				"TM0047",
+				"TM0048",
+				"TM0049",
+				"TM0050",
+				"TM0051",
+				"TM0052",
+				"TM0053",
+				"TM0054",
+				"TM0055",
+				"TM0056",
+				"TM0057",
+				"TM0058"
+			],
+			"peakLoad": 23400,
+			"passengers": 158086,
+			"length": 10.1
+		},
+		"5": {
+			"id": "5",
+			"name": "NQS Central",
+			"color": "#9C6C0C",
+			"stations": [
+				"TM0059",
+				"TM0060",
+				"TM0061",
+				"TM0062",
+				"TM0063",
+				"TM0064",
+				"TM0065",
+				"TM0066",
+				"TM0067",
+				"TM0068",
+				"TM0069",
+				"TM0147",
+				"TM0148"
+			],
+			"peakLoad": 19000,
+			"passengers": 192405,
+			"length": 12.4
+		},
+		"6": {
+			"id": "6",
+			"name": "Américas",
+			"color": "#BB0615",
+			"stations": [
+				"TM0070",
+				"TM0071",
+				"TM0072",
+				"TM0073",
+				"TM0074",
+				"TM0075",
+				"TM0076",
+				"TM0077",
+				"TM0078",
+				"TM0079",
+				"TM0080",
+				"TM0081",
+				"TM0082",
+				"TM0083",
+				"TM0084",
+				"TM0085",
+				"TM0086",
+				"TM0087"
+			],
+			"peakLoad": 24450,
+			"passengers": 282051,
+			"length": 13
+		},
+		"7": {
+			"id": "7",
+			"name": "NQS Sur",
+			"color": "#3D9CD7",
+			"stations": [
+				"TM0103",
+				"TM0102",
+				"TM0101",
+				"TM0100",
+				"TM0099",
+				"TM0098",
+				"TM0097",
+				"TM0096",
+				"TM0095",
+				"TM0094",
+				"TM0093",
+				"TM0092",
+				"TM0091",
+				"TM0090",
+				"TM0089",
+				"TM0088",
+				"TM0099-1"
+			],
+			"peakLoad": 19000,
+			"passengers": 192405,
+			"length": 12.7
+		},
+		"8": {
+			"id": "8",
+			"name": "Caracas Sur",
+			"color": "#D88C00",
+			"stations": [
+				"TM0104",
+				"TM0105",
+				"TM0106",
+				"TM0107",
+				"TM0108",
+				"TM0109",
+				"TM0110",
+				"TM0111",
+				"TM0112",
+				"TM0113",
+				"TM0114",
+				"TM0115",
+				"TM0116",
+				"TM0117",
+				"TM0119",
+				"TM0118"
+			],
+			"peakLoad": 33300,
+			"passengers": 520880,
+			"length": 11.9
+		},
+		"9": {
+			"id": "9",
+			"name": "Eje Ambiental",
+			"color": "#D0A2AA",
+			"stations": [
+				"TM0121",
+				"TM0120"
+			],
+			"peakLoad": 7600,
+			"passengers": 520880,
+			"length": 1.9
+		},
+		"10": {
+			"id": "10",
+			"name": "Calle 26",
+			"color": "#CAB07C",
+			"stations": [
+				"TM0135",
+				"TM0134",
+				"TM0133",
+				"TM0132",
+				"TM0131",
+				"TM0130",
+				"TM0129",
+				"TM0128",
+				"TM0127",
+				"TM0126",
+				"TM0125",
+				"TM0124",
+				"TM0123",
+				"TM0122"
+			],
+			"peakLoad": 20000,
+			"passengers": 104180,
+			"length": 12.2
+		},
+		"11": {
+			"id": "11",
+			"name": "Carrera 10",
+			"color": "#00949C",
+			"stations": [
+				"TM0145",
+				"TM0144",
+				"TM0143",
+				"TM0142",
+				"TM0141",
+				"TM0140",
+				"TM0139",
+				"TM0138",
+				"TM0137",
+				"TM0136"
+			],
+			"peakLoad": 25000,
+			"passengers": 256970,
+			"length": 7.3
+		},
+		"12": {
+			"id": "12",
+			"name": "Carrera 7",
+			"color": "#8A0079",
+			"stations": [
+				"TM0146"
+			],
+			"peakLoad": 5000,
+			"passengers": 20000,
+			"length": 1
+		}
+	},
+	"stations": {
+		"TM0031": {
+			"id": "TM0031",
+			"name": "Terminal",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0030": {
+			"id": "TM0030",
+			"name": "Calle 187",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0029": {
+			"id": "TM0029",
+			"name": "Portal del Norte",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0028": {
+			"id": "TM0028",
+			"name": "Toberín",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0027": {
+			"id": "TM0027",
+			"name": "Cardio Infantil",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0026": {
+			"id": "TM0026",
+			"name": "Mazurén",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0025": {
+			"id": "TM0025",
+			"name": "Calle 146",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0024": {
+			"id": "TM0024",
+			"name": "Calle 142",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0023": {
+			"id": "TM0023",
+			"name": "Alcalá",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0022": {
+			"id": "TM0022",
+			"name": "Prado",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0021": {
+			"id": "TM0021",
+			"name": "Calle 127",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0020": {
+			"id": "TM0020",
+			"name": "Pepe Sierra",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0019": {
+			"id": "TM0019",
+			"name": "Calle 106",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0018": {
+			"id": "TM0018",
+			"name": "Calle 100",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0017": {
+			"id": "TM0017",
+			"name": "Virrey",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0016": {
+			"id": "TM0016",
+			"name": "Calle 85",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0015": {
+			"id": "TM0015",
+			"name": "Héroes",
+			"color": "#95B734",
+			"trunk": "2"
+		},
+		"TM0045": {
+			"id": "TM0045",
+			"name": "Portal de Suba",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0044": {
+			"id": "TM0044",
+			"name": "La Campiña",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0043": {
+			"id": "TM0043",
+			"name": "Suba - TV. 91",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0042": {
+			"id": "TM0042",
+			"name": "21 ángeles",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0041": {
+			"id": "TM0041",
+			"name": "Gratamira",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0040": {
+			"id": "TM0040",
+			"name": "Suba -  AV. Boyacá",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0039": {
+			"id": "TM0039",
+			"name": "Niza - CL 127",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0038": {
+			"id": "TM0038",
+			"name": "Humedal Córdoba",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0037": {
+			"id": "TM0037",
+			"name": "Shaio",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0036": {
+			"id": "TM0036",
+			"name": "Puentelargo",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0035": {
+			"id": "TM0035",
+			"name": "Suba - CL 100",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0034": {
+			"id": "TM0034",
+			"name": "Suba - CL 95",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0033": {
+			"id": "TM0033",
+			"name": "Rionegro",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0032": {
+			"id": "TM0032",
+			"name": "San Martín",
+			"color": "#EABF3B",
+			"trunk": "3"
+		},
+		"TM0046": {
+			"id": "TM0046",
+			"name": "Polo",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0047": {
+			"id": "TM0047",
+			"name": "Esc. Militar",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0048": {
+			"id": "TM0048",
+			"name": "Carrera 47",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0049": {
+			"id": "TM0049",
+			"name": "Carrera 53",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0050": {
+			"id": "TM0050",
+			"name": "Avenida 68",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0051": {
+			"id": "TM0051",
+			"name": "Ferias",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0052": {
+			"id": "TM0052",
+			"name": "Boyacá",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0053": {
+			"id": "TM0053",
+			"name": "Minuto de Dios",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0054": {
+			"id": "TM0054",
+			"name": "Granja - Carrera 77",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0055": {
+			"id": "TM0055",
+			"name": "Avenida Cali",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0056": {
+			"id": "TM0056",
+			"name": "Carrera 90",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0057": {
+			"id": "TM0057",
+			"name": "Quirigua",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0058": {
+			"id": "TM0058",
+			"name": "Portal de la 80",
+			"color": "#7B6CA7",
+			"trunk": "4"
+		},
+		"TM0059": {
+			"id": "TM0059",
+			"name": "La Castellana",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0060": {
+			"id": "TM0060",
+			"name": "NQS - Calle 75",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0061": {
+			"id": "TM0061",
+			"name": "AV. Chile",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0062": {
+			"id": "TM0062",
+			"name": "Simón Bolívar",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0063": {
+			"id": "TM0063",
+			"name": "Coliseo",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0064": {
+			"id": "TM0064",
+			"name": "Campín - Universidad Antonio Nariño",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0065": {
+			"id": "TM0065",
+			"name": "U. Nacional",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0066": {
+			"id": "TM0066",
+			"name": "AV. El Dorado",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0067": {
+			"id": "TM0067",
+			"name": "CAD",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0068": {
+			"id": "TM0068",
+			"name": "Paloquemao",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0069": {
+			"id": "TM0069",
+			"name": "Ricaurte (NQS)",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0147": {
+			"id": "TM0147",
+			"name": "Guatoque - Veraguas",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0148": {
+			"id": "TM0148",
+			"name": "Tygua - San José",
+			"color": "#9C6C0C",
+			"trunk": "5"
+		},
+		"TM0001": {
+			"id": "TM0001",
+			"name": "Calle 76",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0002": {
+			"id": "TM0002",
+			"name": "Calle 72",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0003": {
+			"id": "TM0003",
+			"name": "Flores",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0004": {
+			"id": "TM0004",
+			"name": "Calle 63",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0005": {
+			"id": "TM0005",
+			"name": "Calle 57",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0006": {
+			"id": "TM0006",
+			"name": "Marly",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0007": {
+			"id": "TM0007",
+			"name": "Calle 45",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0008": {
+			"id": "TM0008",
+			"name": "AV. 39",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0009": {
+			"id": "TM0009",
+			"name": "Profamilia",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0010": {
+			"id": "TM0010",
+			"name": "Calle 26",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0011": {
+			"id": "TM0011",
+			"name": "Calle 22",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0012": {
+			"id": "TM0012",
+			"name": "Calle 19",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0013": {
+			"id": "TM0013",
+			"name": "AV. Jiménez (AV. Caracas)",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0014": {
+			"id": "TM0014",
+			"name": "Tercer Milenio",
+			"color": "#00398B",
+			"trunk": "1"
+		},
+		"TM0135": {
+			"id": "TM0135",
+			"name": "Portal Eldorado",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0134": {
+			"id": "TM0134",
+			"name": "Modelia",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0133": {
+			"id": "TM0133",
+			"name": "Normandía",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0132": {
+			"id": "TM0132",
+			"name": "AV. Rojas",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0131": {
+			"id": "TM0131",
+			"name": "El Tiempo - Maloka",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0130": {
+			"id": "TM0130",
+			"name": "Salitre - El Greco",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0129": {
+			"id": "TM0129",
+			"name": "CAN",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0128": {
+			"id": "TM0128",
+			"name": "Gobernación",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0127": {
+			"id": "TM0127",
+			"name": "Quinta Paredes",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0126": {
+			"id": "TM0126",
+			"name": "Corferias",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0125": {
+			"id": "TM0125",
+			"name": "Ciudad Universitaria",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0124": {
+			"id": "TM0124",
+			"name": "Plaza de la Democracia",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0123": {
+			"id": "TM0123",
+			"name": "Centro Memoria",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0122": {
+			"id": "TM0122",
+			"name": "Universidades",
+			"color": "#CAB07C",
+			"trunk": "10"
+		},
+		"TM0121": {
+			"id": "TM0121",
+			"name": "Las Aguas",
+			"color": "#D0A2AA",
+			"trunk": "9"
+		},
+		"TM0120": {
+			"id": "TM0120",
+			"name": "Museo del Oro",
+			"color": "#D0A2AA",
+			"trunk": "9"
+		},
+		"TM0070": {
+			"id": "TM0070",
+			"name": "AV. Jiménez (CL 13)",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0071": {
+			"id": "TM0071",
+			"name": "De La Sabana",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0072": {
+			"id": "TM0072",
+			"name": "San Facon - KR. 22",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0073": {
+			"id": "TM0073",
+			"name": "Ricaurte (CL 13)",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0074": {
+			"id": "TM0074",
+			"name": "CDS - Carrera 32",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0075": {
+			"id": "TM0075",
+			"name": "Zona Industrial",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0076": {
+			"id": "TM0076",
+			"name": "Carrera 43",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0077": {
+			"id": "TM0077",
+			"name": "Puente Aranda",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0078": {
+			"id": "TM0078",
+			"name": "Américas - KR 53A",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0079": {
+			"id": "TM0079",
+			"name": "Pradera",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0080": {
+			"id": "TM0080",
+			"name": "Marsella",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0081": {
+			"id": "TM0081",
+			"name": "Mundo Aventura",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0082": {
+			"id": "TM0082",
+			"name": "Mandalay",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0083": {
+			"id": "TM0083",
+			"name": "Banderas",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0084": {
+			"id": "TM0084",
+			"name": "Transversal 86",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0085": {
+			"id": "TM0085",
+			"name": "Biblioteca Tintal",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0086": {
+			"id": "TM0086",
+			"name": "Patio Bonito",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0087": {
+			"id": "TM0087",
+			"name": "Portal de las Américas",
+			"color": "#BB0615",
+			"trunk": "6"
+		},
+		"TM0103": {
+			"id": "TM0103",
+			"name": "San Mateo",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0102": {
+			"id": "TM0102",
+			"name": "Terreros - Hospital C.V.",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0101": {
+			"id": "TM0101",
+			"name": "León XIII",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0100": {
+			"id": "TM0100",
+			"name": "La Despensa",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0099": {
+			"id": "TM0099",
+			"name": "Portal del Sur",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0098": {
+			"id": "TM0098",
+			"name": "Perdomo",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0097": {
+			"id": "TM0097",
+			"name": "Madelena",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0096": {
+			"id": "TM0096",
+			"name": "Sevillana",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0095": {
+			"id": "TM0095",
+			"name": "Venecia",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0094": {
+			"id": "TM0094",
+			"name": "Alquería",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0093": {
+			"id": "TM0093",
+			"name": "General Santander",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0092": {
+			"id": "TM0092",
+			"name": "NQS - CL 38A S.",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0091": {
+			"id": "TM0091",
+			"name": "NQS - CL 30 S.",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0090": {
+			"id": "TM0090",
+			"name": "SENA",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0089": {
+			"id": "TM0089",
+			"name": "Santa Isabel",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0088": {
+			"id": "TM0088",
+			"name": "Comuneros",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		},
+		"TM0104": {
+			"id": "TM0104",
+			"name": "Hospital",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0105": {
+			"id": "TM0105",
+			"name": "Hortúa",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0106": {
+			"id": "TM0106",
+			"name": "Nariño",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0107": {
+			"id": "TM0107",
+			"name": "Fucha",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0108": {
+			"id": "TM0108",
+			"name": "Restrepo",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0109": {
+			"id": "TM0109",
+			"name": "Olaya",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0110": {
+			"id": "TM0110",
+			"name": "Quiroga",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0111": {
+			"id": "TM0111",
+			"name": "Calle 40 S",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0112": {
+			"id": "TM0112",
+			"name": "Santa Lucía",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0113": {
+			"id": "TM0113",
+			"name": "Socorro",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0114": {
+			"id": "TM0114",
+			"name": "Consuelo",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0115": {
+			"id": "TM0115",
+			"name": "Molinos",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0116": {
+			"id": "TM0116",
+			"name": "Biblioteca",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0117": {
+			"id": "TM0117",
+			"name": "Parque",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0119": {
+			"id": "TM0119",
+			"name": "Portal del Tunal",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0118": {
+			"id": "TM0118",
+			"name": "Portal de Usme",
+			"color": "#D88C00",
+			"trunk": "8"
+		},
+		"TM0145": {
+			"id": "TM0145",
+			"name": "Portal 20 de Julio",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0144": {
+			"id": "TM0144",
+			"name": "Country Sur",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0143": {
+			"id": "TM0143",
+			"name": "AV. 1° Mayo",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0142": {
+			"id": "TM0142",
+			"name": "Ciudad Jardín - UAN",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0141": {
+			"id": "TM0141",
+			"name": "Policarpa",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0140": {
+			"id": "TM0140",
+			"name": "Hospitales",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0139": {
+			"id": "TM0139",
+			"name": "Bicentenario",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0138": {
+			"id": "TM0138",
+			"name": "San Victorino",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0137": {
+			"id": "TM0137",
+			"name": "Las Nieves",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0136": {
+			"id": "TM0136",
+			"name": "San Diego",
+			"color": "#00949C",
+			"trunk": "11"
+		},
+		"TM0146": {
+			"id": "TM0146",
+			"name": "Museo Nacional",
+			"color": "#8A0079",
+			"trunk": "12"
+		},
+		"TM0099-1": {
+			"id": "TM0099-1",
+			"name": "Bosa",
+			"color": "#3D9CD7",
+			"trunk": "7"
+		}
+	},
+	"trunksKeys": [
+		"1",
+		"2",
+		"3",
+		"4",
+		"5",
+		"6",
+		"7",
+		"8",
+		"9",
+		"10",
+		"11",
+		"12"
+	],
+	"stationsKeys": [
+		"TM0031",
+		"TM0030",
+		"TM0029",
+		"TM0028",
+		"TM0027",
+		"TM0026",
+		"TM0025",
+		"TM0024",
+		"TM0023",
+		"TM0022",
+		"TM0021",
+		"TM0020",
+		"TM0019",
+		"TM0018",
+		"TM0017",
+		"TM0016",
+		"TM0015",
+		"TM0045",
+		"TM0044",
+		"TM0043",
+		"TM0042",
+		"TM0041",
+		"TM0040",
+		"TM0039",
+		"TM0038",
+		"TM0037",
+		"TM0036",
+		"TM0035",
+		"TM0034",
+		"TM0033",
+		"TM0032",
+		"TM0046",
+		"TM0047",
+		"TM0048",
+		"TM0049",
+		"TM0050",
+		"TM0051",
+		"TM0052",
+		"TM0053",
+		"TM0054",
+		"TM0055",
+		"TM0056",
+		"TM0057",
+		"TM0058",
+		"TM0059",
+		"TM0060",
+		"TM0061",
+		"TM0062",
+		"TM0063",
+		"TM0064",
+		"TM0065",
+		"TM0066",
+		"TM0067",
+		"TM0068",
+		"TM0069",
+		"TM0147",
+		"TM0148",
+		"TM0001",
+		"TM0002",
+		"TM0003",
+		"TM0004",
+		"TM0005",
+		"TM0006",
+		"TM0007",
+		"TM0008",
+		"TM0009",
+		"TM0010",
+		"TM0011",
+		"TM0012",
+		"TM0013",
+		"TM0014",
+		"TM0135",
+		"TM0134",
+		"TM0133",
+		"TM0132",
+		"TM0131",
+		"TM0130",
+		"TM0129",
+		"TM0128",
+		"TM0127",
+		"TM0126",
+		"TM0125",
+		"TM0124",
+		"TM0123",
+		"TM0122",
+		"TM0121",
+		"TM0120",
+		"TM0070",
+		"TM0071",
+		"TM0072",
+		"TM0073",
+		"TM0074",
+		"TM0075",
+		"TM0076",
+		"TM0077",
+		"TM0078",
+		"TM0079",
+		"TM0080",
+		"TM0081",
+		"TM0082",
+		"TM0083",
+		"TM0084",
+		"TM0085",
+		"TM0086",
+		"TM0087",
+		"TM0103",
+		"TM0102",
+		"TM0101",
+		"TM0100",
+		"TM0099",
+		"TM0098",
+		"TM0097",
+		"TM0096",
+		"TM0095",
+		"TM0094",
+		"TM0093",
+		"TM0092",
+		"TM0091",
+		"TM0090",
+		"TM0089",
+		"TM0088",
+		"TM0104",
+		"TM0105",
+		"TM0106",
+		"TM0107",
+		"TM0108",
+		"TM0109",
+		"TM0110",
+		"TM0111",
+		"TM0112",
+		"TM0113",
+		"TM0114",
+		"TM0115",
+		"TM0116",
+		"TM0117",
+		"TM0119",
+		"TM0118",
+		"TM0145",
+		"TM0144",
+		"TM0143",
+		"TM0142",
+		"TM0141",
+		"TM0140",
+		"TM0139",
+		"TM0138",
+		"TM0137",
+		"TM0136",
+		"TM0146",
+		"TM0099-1"
+	],
+	"transmi": {
+		"speed": 26.2,
+		"passengers": 2213236,
+		"fleet": 1697,
+		"limitPerBus": 250,
+		"start": 0,
+		"end": 1200,
+		"peeks": [
+			{
+				"from": 120,
+				"to": 269
+			},
+			{
+				"from": 330,
+				"to": 689
+			},
+			{
+				"from": 750,
+				"to": 929
+			}
+		]
+	}
+}

@@ -16,7 +16,7 @@ async.reduce(indexes, [], (routes, i, callback) => {
 		url : url + '&start='+i+'&_='+Date.now(),
 		headers : {
 			//filter i guess
-			'Cookie': 'nexuraSID=1819b6b62a00d9aa4127f5212ce21a61'
+			'Cookie': 'nexuraSID=deca6cba862c1ed8984530b3625344b3'
 		}
 	}, (err, response, body) => {
 		var html = JSON.parse(body).data;
@@ -33,7 +33,7 @@ async.reduce(indexes, [], (routes, i, callback) => {
 		callback(err, routes);
 	})
 }, (err, data) => {
-	fs.writeFile('../routes.json', JSON.stringify(data), function(){
+	fs.writeFile('../routes.json', JSON.stringify(data,null,'\t'), function(){
 		if(err) return console.error(err);
 		console.log('Routes saved')
 	})

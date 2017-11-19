@@ -4,6 +4,7 @@ const cheerio = require('cheerio');
 const async = require('async');
 const fs = require('fs');
 
+let types = {};
 var count = 0;
 let getRoute = (item, callback) => {
 	request({
@@ -14,12 +15,11 @@ let getRoute = (item, callback) => {
 		let route = [];
 		stations.each((i, el) => {
 			let station = $(el).find('.ajam').text().split(' => ')[2].split('\n')[0];
-			route.push({
-				stop : !$(el).find('.icon-circle-blank').length,
-				station : station
-			})
-			if(station.indexOf('BD')){
-				console.log(item.cod)
+			if(!$(el).find('.icon-paradero').length){
+				route.push({
+					stop : !$(el).find('.icon-circle-blank').length,
+					station : station
+				})
 			}
 		})
 		count++;
@@ -27,9 +27,9 @@ let getRoute = (item, callback) => {
 		callback(null, route);
 	})
 }
-
 async.map(routes, getRoute, (err, data) => {
-	fs.writeFile('../solution.json', JSON.stringify(data), (err) => {
+	console.log(types)
+	fs.writeFile('../solution.json', JSON.stringify(data,null,'\t'), (err) => {
 		if(err) return console.error(err);
 		console.log('Current solution saved')
 	})
