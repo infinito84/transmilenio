@@ -9,8 +9,9 @@ solution.forEach(route =>{
 	for(let i=0; i<route.length - 2; i++){
 		let a = route[i].station;
 		let b = route[i+1].station;
+		let c = route[i-1] && route[i-1].station;
 		restrictions[a] = restrictions[a] || {};
-		restrictions[a][b] = 1;
+		restrictions[a][b] = c ? c : true;
 		let howMany = Object.keys(restrictions[a]).length ;
 		if(howMany > max){
 			max = howMany;

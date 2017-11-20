@@ -12,19 +12,23 @@ let getRoute = (item, callback) => {
 	}, (err, response, body) => {
 		let $ = cheerio.load(body);
 		let stations = $('.recorrido1');
-		let route = [];
+		let route1 = [];
+		let route2 = {};
 		stations.each((i, el) => {
 			let station = $(el).find('.ajam').text().split(' => ')[2].split('\n')[0];
 			if(!$(el).find('.icon-paradero').length){
-				route.push({
-					stop : !$(el).find('.icon-circle-blank').length,
-					station : station
-				})
+				route1.push(station);
+				if(!$(el).find('.icon-circle-blank').length){
+					route2[station] = 1;
+				};
 			}
 		})
 		count++;
 		console.log(count+'/'+routes.length);
-		callback(null, route);
+		callback(null, {
+			stop : route2,
+			stations : route1
+		});
 	})
 }
 async.map(routes, getRoute, (err, data) => {

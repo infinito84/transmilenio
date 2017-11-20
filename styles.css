@@ -6,3 +6,7 @@ html, body, canvas{
 	font-size: 16px;
 	overflow: hidden;
 }
+
+canvas{
+	height: 80%;
+}
