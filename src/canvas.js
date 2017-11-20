@@ -23,5 +23,5 @@ function Canvas() {
         that.stations = data.coordenadas;
     });
 
-	setInterval(that.draw, 50);
+	setInterval(that.draw, 1000);
 }

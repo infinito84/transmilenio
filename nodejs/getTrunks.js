@@ -118,8 +118,26 @@ stations.coordenadas.forEach(station => {
 	}
 });
 
-data.trunksKeys = Object.keys(data.trunks);
-data.stationsKeys = Object.keys(data.stations);
+for(let trunk in data.trunks){
+	let trunkObj = data.trunks[trunk];
+	let total = (trunkObj.length * 60 / brtdata.transmi.speed);
+	let time = parseInt(total / trunkObj.stations.length);
+	trunkObj.stations.forEach(station => {
+		data.stations[station].time = time;
+	})
+	let diff = total - (time*trunkObj.stations.length);
+	let reward = [];
+	while(diff > 0){
+		let who = parseInt(Math.random() * trunkObj.stations.length);
+		if(reward.indexOf(who) === -1){
+			reward.push(who);
+			let station = trunkObj.stations[who];
+			data.stations[station].time++;
+			diff--;
+		}
+	}
+}
+
 data.transmi = brtdata.transmi;
 
 fs.writeFile('../trunks.json', JSON.stringify(data, null,'\t'), (err) => {
