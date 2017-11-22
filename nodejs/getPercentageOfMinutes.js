@@ -13,7 +13,7 @@ let isPeek = (min) => {
 
 let getMinutes = () => {
 	let minutes = [];
-	for(let i=transmi.start; i < transmi.end; i++){
+	for(let i=transmi.start+60; i < transmi.end-60; i++){
 		minutes.push({
 			min : i,
 			per : isPeek(i) ? 1000 : 100

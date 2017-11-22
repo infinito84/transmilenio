@@ -1,9 +1,10 @@
-function Bus(route, stations, transmi){
+module.exports = function Bus(route, stations, transmi){
 	var that = this;
 	this.passengers = {};
 	this.count = 0;
 	this.minutes = 0;
 	this.n = 0;
+	this.success = 0;
 
 	this.calc = function(){
 		this.station = route.stations[this.count];
@@ -24,17 +25,21 @@ function Bus(route, stations, transmi){
 			if(stations[this.nextStation].time === this.minutes){
 				this.minutes = 0;
 				this.count++;
+				var pass = this.passengers[this.nextStation];
 				if(this.count === route.stations.length - 1){
 					this.passengers = {};
 					this.n = 0;
 					this.count = 0;
+					if(pass){
+						this.success += pass.length;
+					}
 					return;
 				}
 				if(route.stop[this.nextStation]){
-					var pass = this.passengers[this.nextStation];
 					if(pass){
 						that.n -= pass.length;
 						delete this.passengers[this.nextStation];
+						this.success += pass.length;
 					}
 					for(var i = stations[this.nextStation].passengers.length - 1; i >= 0; i--){
 						var p = stations[this.nextStation].passengers[i];

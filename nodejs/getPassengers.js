@@ -2,6 +2,7 @@ const fs = require('fs');
 const minutes = require('../minutes.json');
 const trunks = require('../trunks.json');
 const restrictions = require('../restrictions.json');
+const solution = require('../solution.json');
 
 let passengers = {};
 
@@ -36,23 +37,40 @@ let getMinute = () => {
 	}
 }
 
+let getStationTo = (from) => {
+	var routes = [];
+	for(var i=0; i < solution.length; i++){
+		if(solution[i].stop[from]){
+			routes.push(solution[i]);
+		}
+	}
+	if(routes.length === 0)return false;
+	var route = routes[parseInt(Math.random() * routes.length)];
+	var keys = Object.keys(route.stop);
+	keys.splice(keys.indexOf(from), 1);
+	return keys[parseInt(Math.random() * keys.length)];
+}
+
 let max = 0;
 let which = 0;
 for(let i=0; i< trunks.transmi.passengers; i++){
 	let min = getMinute();
 	passengers[min] = passengers[min] || [];
 	let passenger = {
-		from : getStation(),
-		to : getStation()
+		from : getStation()
 	}
-	if(passenger.from === passengers.to){
-		passenger.from = getStation();
+	// destination without transshipments
+	passenger.to = getStationTo(passenger.from);
+	if(!passenger.to){
+		i--;
+		continue;
 	}
 	passengers[min].push(passenger);
 	if(passengers[min].length > max){
 		max = passengers[min].length;
 		which = min;
 	}
+	console.log(i/trunks.transmi.passengers, '%')
 }
 
 console.log('The minute '+which+' has '+max+' passengers.');
