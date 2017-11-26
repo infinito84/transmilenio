@@ -125,7 +125,7 @@ for(let trunk in data.trunks){
 	trunkObj.stations.forEach(station => {
 		data.stations[station].time = time;
 	})
-	let diff = total - (time*trunkObj.stations.length);
+	/*let diff = total - (time*trunkObj.stations.length);
 	let reward = [];
 	while(diff > 0){
 		let who = parseInt(Math.random() * trunkObj.stations.length);
@@ -135,7 +135,7 @@ for(let trunk in data.trunks){
 			data.stations[station].time++;
 			diff--;
 		}
-	}
+	}*/
 }
 
 data.transmi = brtdata.transmi;

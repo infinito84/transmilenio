@@ -8,7 +8,7 @@ const Pareto = require('./pareto');
 const CrowdingDistance = require('./crowding');
 const Reproduction = require('./crossover');
 const generations = 100;
-const n = 20;
+const n = 10;
 let bestSolution = [];
 
 console.log('Generating population');

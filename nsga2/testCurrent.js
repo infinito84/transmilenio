@@ -2,6 +2,7 @@ var async = require('async');
 var obj1 = require('./objective1');
 var obj2 = require('./objective2');
 var solution = require('../solution.json');
+//var solution = require('../bestSolution.json').solution;
 
 var fitness = {
 	solution : solution,

@@ -7,7 +7,7 @@ module.exports = function Station(station){
 	this.sumTime = function(){
 		for(var i = this.passengers.length -1; i>=0; i--){
 			this.passengers[i].time++;
-			if(this.passengers[i].time > 15){
+			if(this.passengers[i].time > 60){
 				this.passengers.splice(i, 1);
 				this.negative++;
 			}
