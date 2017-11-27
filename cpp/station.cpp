@@ -6,6 +6,8 @@ public:
 	string id;
 	string name;
 	double time;
+	double total;
+	int count;
 	vector<Passenger*> passengers;
 	Station(string i, string n, double t);
 	void sumTime();
@@ -17,12 +19,12 @@ Station::Station(string i, string n, double t){
 	id = i;
 	name = n;
 	time = t;
+	total = 0;
+	count = 0;
 }
 
 void Station::sumTime(){
-	for(short j = 0; j<passengers.size(); j++){
-		passengers[j]->time++;
-	}
+	total += passengers.size();
 }
 
 vector<Station*> Station::loadStations(Document& trunks){

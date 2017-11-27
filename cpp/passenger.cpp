@@ -6,7 +6,6 @@ public:
 	string from;
 	string to;
 	short minute;
-	short time;
 	Passenger(string a, string b, short t);
 	static vector<Passenger*> loadPassengers(Document& json);
 	static vector<Passenger*> clone(vector<Passenger*>& pp);
@@ -16,7 +15,6 @@ Passenger::Passenger(string a, string b, short t){
 	from = a;
 	to = b;
 	minute = t;
-	time = 0;
 }
 
 vector<Passenger*> Passenger::loadPassengers(Document& json){
@@ -31,16 +29,6 @@ vector<Passenger*> Passenger::loadPassengers(Document& json){
 			passengers.push_back(new Passenger(a, b, t));
 		}
 		itr++;
-	}
-	return passengers;
-}
-
-vector<Passenger*> Passenger::clone(vector<Passenger*>& ss){
-	vector<Passenger*> passengers;
-	passengers.reserve(ss.size());
-	#pragma omp parallel for
-	for(long i=0; i< ss.size(); i++){
-		passengers.insert(passengers.begin() + i, new Passenger(ss[i]->from, ss[i]->to, ss[i]->minute));
 	}
 	return passengers;
 }

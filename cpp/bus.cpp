@@ -7,6 +7,7 @@ public:
 	short n;
 	short success;
 	short totalMinutes;
+	double total;
 	Cromosome *route;
 
 	Bus(Cromosome *r);
@@ -21,6 +22,7 @@ Bus::Bus(Cromosome *r){
 	n = 0;
 	success = 0;
 	totalMinutes = 0;
+	total = 0;
 	route = r;
 }
 
@@ -42,7 +44,6 @@ void Bus::calc(){
 				if(passengers[i]->to.compare(station->id) == 0){
 					n--;
 					success++;
-					totalMinutes += passengers[i]->time;
 					passengers.erase(passengers.begin() + i);
 				}
 			}
@@ -60,9 +61,6 @@ void Bus::calc(){
 			minutes = -1;
 			count++;
 			if(count == route->stations.size() - 1){
-				for(short i=passengers.size() - 1; i>=0; i--){
-					totalMinutes += passengers[i]->time;
-				}
 				success += passengers.size();
 				passengers.clear();
 				n = 0;
@@ -74,7 +72,5 @@ void Bus::calc(){
 }
 
 void Bus::sumTime(){
-	for(short j = 0; j<passengers.size(); j++){
-		passengers[j]->time++;
-	}
+	total += passengers.size();
 }

@@ -1,8 +1,7 @@
 using namespace std;
 
-double objective2(Solution *solution, vector<Station*>& ss, vector<Passenger*>& pp){
+double objective2(Solution *solution, vector<Station*>& ss, vector<Passenger*>& passengers){
 	vector<Station*> stations = Station::clone(ss);
-	vector<Passenger*> passengers = Passenger::clone(pp);
 	solution->update(stations);
 
 	vector<Bus*> buses;
@@ -14,18 +13,16 @@ double objective2(Solution *solution, vector<Station*>& ss, vector<Passenger*>& 
 		}
 		buses.push_back(new Bus(cromosome));
 	}
+	int to = 0;
 	for(short i=START; i<END; i++){
-		int to = 0;
-		for(int j=0; j<passengers.size(); j++){
+		for(int j=to; j<passengers.size(); j++){
 			if(passengers[j]->minute > i){
 				to = j;
 				break;
 			}
 			Station *s = getStation(stations, passengers[j]->from);
 			s->passengers.push_back(passengers[j]);
-		}
-		if(to > 0){
-			passengers.erase(passengers.begin(), passengers.begin() + to);
+			s->count++;
 		}
 		for(short j=0; j<buses.size(); j++){
 			buses[j]->calc();
@@ -38,16 +35,12 @@ double objective2(Solution *solution, vector<Station*>& ss, vector<Passenger*>& 
 	double total = 0;
 	double count = 0;
 	for(short j=0; j<buses.size(); j++){
-		if(buses[j]->totalMinutes > 0){
-			total += buses[j]->totalMinutes;
-			count += buses[j]->success;
-		}
+		total += buses[j]->total;
+		count += buses[j]->success;
 	}
 	for(short j=0; j<stations.size(); j++){
-		for(short k=0; k<stations[j]->passengers.size(); k++){
-			total += stations[j]->passengers[k]->time;
-			count += 1;
-		}
+		total += stations[j]->total;
+		count += stations[j]->count;
 	}
 
 	solution->objective2 = total / count;
