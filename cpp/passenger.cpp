@@ -31,5 +31,5 @@ vector<Passenger*> Passenger::loadPassengers(Document& json){
 		}
 		itr++;
 	}
-	cout << "Imported: " << passengers.size() << " passengers" << endl;
+	return passengers;
 }

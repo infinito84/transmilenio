@@ -30,13 +30,12 @@ int main() {
 
 	// Obtenemos pasajeros
 	jsonPassengers.Parse(readFile("../passengers.json"));
-	vector<Passenger*> passengers = Passenger::loadPassengers(jsonPassengers);
-
+	
 	// Obtenemos solución actual
 	jsonSolution.Parse(readFile("../solution.json"));
 	Solution *current = new Solution(jsonSolution, stations);
 	objective1(current);
-	cout << current->toString() << endl;
+	objective2(current, stations, jsonPassengers);
 	// Creamos N individuos aleatorios (basados en solución actual)
 	// y calculamos fitness
 	vector<Solution*> population;
