@@ -37,8 +37,10 @@ vector<Passenger*> Passenger::loadPassengers(Document& json){
 
 vector<Passenger*> Passenger::clone(vector<Passenger*>& ss){
 	vector<Passenger*> passengers;
+	passengers.reserve(ss.size());
+	#pragma omp parallel for
 	for(long i=0; i< ss.size(); i++){
-		passengers.push_back(new Passenger(ss[i]->from, ss[i]->to, ss[i]->minute));
+		passengers.at(i) = new Passenger(ss[i]->from, ss[i]->to, ss[i]->minute);
 	}
 	return passengers;
 }

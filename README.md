@@ -8,7 +8,7 @@ http://www.sitp.gov.co/plano_de_estaciones_y_portales_de_transmilenio
 #### Datos de las rutas:
 http://www.sitp.gov.co/buscador_de_rutas
 
-#### Restricciones: 
+#### Restricciones:
 *  Las rutas deben respetar las conexiones actuales.
 *  No se puede viajar a la misma estación.
 *  Un bus no puede hacer giros inexperados o devolverse a menos que lo tenga permitido, se debe respetar la dirección que lleva el vehículo.
@@ -32,3 +32,8 @@ https://www.codecogs.com/latex/eqneditor.php
 -  un son los usuarios que no fueron atendidos.
 -  R el número de rutas totales
 -  Ri un vector con las paradas de la ruta
+
+##### Server pro
+git clone https://github.com/infinito84/transmilenio.git
+sudo apt-get update
+sudo apt-get install gcc-multilib g++ rapidjson-dev libboost-all-dev
