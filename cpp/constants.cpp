@@ -1,5 +1,7 @@
+// NSGA II
 #define POPULATION 10 //100
 #define MUTATION 0.1
+#define GENERATIONS 5
 
 //Transmilenio
 #define FLEET 1697

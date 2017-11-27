@@ -6,8 +6,12 @@ public:
 	int n;
 	double objective1;
 	double objective2;
+	double crowding;
+	double nobj1;
+	double nobj2;
 	vector<Cromosome*> cromosomes;
 
+	Solution(int n);
 	Solution(Document& jsonSolution, vector<Station*> stations);
 	Solution(Solution* solution);
 	string toString();
@@ -37,6 +41,10 @@ Solution::Solution(Solution* solution){
 	for(short i=0; i< n; i++){
 		cromosomes.push_back(new Cromosome(solution->cromosomes[i]));
 	}
+}
+
+Solution::Solution(int num){
+	n = num;
 }
 
 void Solution::update(vector<Station*> stations){
