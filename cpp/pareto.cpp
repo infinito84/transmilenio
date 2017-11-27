@@ -34,11 +34,11 @@ vector< vector<Solution*> > pareto(int g, vector<Solution*>& population){
 				res << no[k]->objective1 << "\t" << no[k]->objective2 << "\n";
 				if(g == GENERATIONS-1){
 					stringstream res3;
-					res3 << "solution" << k;
+					res3 << "results/solution" << k << ".txt";
 					writeFile(res3.str().c_str(), no[k]->toString());
 				}
 			}
-			res2 << "frontier" << g;
+			res2 << "results/frontier" << g << ".txt";
 			writeFile(res2.str().c_str(), res.str());
 		}
 	}
