@@ -2,26 +2,25 @@ using namespace std;
 
 class Cromosome{
 public:
-	bool *adn;
-	string *stations;
+	short *adn;
+	vector <Station*> stations;
 	int n;
 
 	Cromosome(int n);
-	Cromosome(Cromosome& cromosome);
+	Cromosome(Cromosome *cromosome);
 	string toString();
 };
 
 Cromosome::Cromosome(int num){
 	n = num;
-	adn = new bool[n+1];
-	stations = new string[n];
-	adn[n] = 1;
+	adn = new short[n+1]();
+	adn[n] = true;
 }
 
-Cromosome::Cromosome(Cromosome& that){
-	n = that.n;
-	adn = new bool[n+1];
-	stations = that.stations;
+Cromosome::Cromosome(Cromosome *that){
+	n = that->n;
+	adn = new short[n+1];
+	stations = that->stations;
 	for(short i = 0; i<n; i++){
 		adn[i] = dices() < 0.5;
 	}
@@ -31,18 +30,8 @@ Cromosome::Cromosome(Cromosome& that){
 string Cromosome::toString(){
 	stringstream res;
 	for(short i = 0; i< n; i++){
-		if(adn[i]){
-			res << "1";
-		}
-		else{
-			res << "0";
-		}
+		res << adn[i];
 	}
-	if(adn[n]){
-		res << "[1]\n";
-	}
-	else{
-		res << "[0]\n";
-	}
+	res << "[" << adn[n] << "]\n";
 	return res.str();
 }

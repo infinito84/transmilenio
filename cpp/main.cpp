@@ -1,35 +1,47 @@
+#include "constants.cpp"
 #include <iostream>
 #include <stdio.h>
 #include <time.h>
 #include <string>
 #include <sstream>
 #include <cstdlib>
+#include <vector>
+#include <boost/lexical_cast.hpp>
 #include "rapidjson/document.h"
-#include "constants.h"
 #include "utils.cpp"
-//#include "population.cpp"
+#include "passenger.cpp"
+#include "station.cpp"
 #include "cromosome.cpp"
 #include "solution.cpp"
+#include "bus.cpp"
 #include "objective1.cpp"
+#include "objective2.cpp"
 
 using namespace std;
 using namespace rapidjson;
 
 int main() {
 	cout << "NSGA II" << endl;
-	Document jsonSolution;
-	jsonSolution.Parse(readFile("../solution.json"));
+	Document jsonSolution, jsonTrunks, jsonPassengers;
+
+	// Obtenemos estaciones
+	jsonTrunks.Parse(readFile("../trunks.json"));
+	vector<Station*> stations = Station::loadStations(jsonTrunks);
+
+	// Obtenemos pasajeros
+	jsonPassengers.Parse(readFile("../passengers.json"));
+	vector<Passenger*> passengers = Passenger::loadPassengers(jsonPassengers);
 
 	// Obtenemos solución actual
-	Solution current(jsonSolution);
+	jsonSolution.Parse(readFile("../solution.json"));
+	Solution *current = new Solution(jsonSolution, stations);
 	objective1(current);
-	cout << current.objective1 << endl;;
-
+	cout << current->toString() << endl;
 	// Creamos N individuos aleatorios (basados en solución actual)
 	// y calculamos fitness
-	Solution *population = (Solution*) malloc(N * sizeof(Solution*));
-	for(short i=0; i< N; i++){
-		population[i] = Solution(current);
+	vector<Solution*> population;
+	for(short i=0; i< POPULATION; i++){
+		population.push_back(new Solution(current));
 		objective1(population[i]);
 	}
 

@@ -6,32 +6,35 @@ public:
 	int n;
 	double objective1;
 	double objective2;
+	vector<Cromosome*> cromosomes;
 
-	Cromosome *cromosomes;
-	Solution(Document& jsonSolution);
-	Solution(Solution& solution);
+	Solution(Document& jsonSolution, vector<Station*> stations);
+	Solution(Solution* solution);
 	string toString();
 };
 
-Solution::Solution(Document& jsonSolution){
+Solution::Solution(Document& jsonSolution, vector<Station*> stations){
 	n = jsonSolution.Size();
-	cromosomes = (Cromosome*)malloc(n * sizeof(Cromosome*));
-	for (SizeType j = 0; j < n; j++) {
+	for (short j = 0; j < n; j++) {
 		Value& route = jsonSolution[j];
-		cromosomes[j] = Cromosome(route["stations"].Size());
-		for (SizeType k = 0; k < cromosomes[j].n; k++){
+		cromosomes.push_back(new Cromosome(route["stations"].Size()));
+		for (short k = 0; k < cromosomes[j]->n; k++){
 			const char *station = route["stations"][k].GetString();
-			cromosomes[j].stations[k] = station;
-			cromosomes[j].adn[k] = route["stop"].HasMember(station);
+			for(short i = 0; i < stations.size(); i++){
+				if(stations[i]->id.compare(station) == 0){
+					cromosomes[j]->stations.push_back(stations[i]);
+					cromosomes[j]->adn[k] = route["stop"].HasMember(station) ? 1 : 0;
+					break;
+				}
+			}
 		}
 	}
 }
 
-Solution::Solution(Solution& solution){
-	n = solution.n;
-	cromosomes = (Cromosome*)malloc(n * sizeof(Cromosome*));
+Solution::Solution(Solution* solution){
+	n = solution->n;
 	for(short i=0; i< n; i++){
-		cromosomes[i] = Cromosome(solution.cromosomes[i]);
+		cromosomes.push_back(new Cromosome(solution->cromosomes[i]));
 	}
 }
 
@@ -39,7 +42,7 @@ string Solution::toString(){
 	stringstream res;
 	res << "[\n";
 	for(short i = 0; i < n; i++){
-		res << "\t" << cromosomes[i].toString();
+		res << "\t" << cromosomes[i]->toString();
 	}
 	res << "]\n";
 	return res.str();
