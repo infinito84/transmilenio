@@ -5,7 +5,7 @@ bool dominates(Solution *a, Solution *b){
 	return (a->objective1 <= b->objective1 && a->objective2 <= b->objective2) && (a->objective1 < b->objective1 || a->objective2 < b->objective2);
 }
 
-vector< vector<Solution*> > pareto(vector<Solution*>& population){
+vector< vector<Solution*> > pareto(int g, vector<Solution*>& population){
 	vector< vector<Solution*> > frontiers;
 	bool show = true;
 	while(population.size()){
@@ -29,10 +29,17 @@ vector< vector<Solution*> > pareto(vector<Solution*>& population){
 		population = si;
 		frontiers.push_back(no);
 		if(show){
-			show = false;
+			stringstream res, res2;
 			for(short k=0; k < no.size(); k++){
-				cout << no[k]->objective1 << "\t" << no[k]->objective2 << endl;
+				res << no[k]->objective1 << "\t" << no[k]->objective2 << "\n";
+				if(g == GENERATIONS-1){
+					stringstream res3;
+					res3 << "solution" << k;
+					writeFile(res3.str().c_str(), no[k]->toString());
+				}
 			}
+			res2 << "frontier" << g;
+			writeFile(res2.str().c_str(), res.str());
 		}
 	}
 	return frontiers;

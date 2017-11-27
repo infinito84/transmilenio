@@ -1,5 +1,6 @@
 #include "constants.cpp"
 #include <iostream>
+#include <fstream>
 #include <stdio.h>
 #include <time.h>
 #include <string>
@@ -41,6 +42,7 @@ int main() {
 	Solution *current = new Solution(jsonSolution, stations);
 	objective1(current);
 	objective2(current, stations, passengers);
+	writeFile("results/current.txt", current->toString());
 	cout << "Reference: " << current->objective1 << "\t" << current->objective2 << endl;
 
 	// Creamos N individuos aleatorios (basados en solución actual)
@@ -57,7 +59,7 @@ int main() {
 	// Evolucionando :)
 	for(short i=0; i<GENERATIONS; i++){
 		//Ordenamiento
-		vector< vector<Solution*> > frontiers = pareto(population);
+		vector< vector<Solution*> > frontiers = pareto(i, population);
 		population.clear();
 		short count = 0;
 		for(short j=0; j<frontiers.size(); j++){

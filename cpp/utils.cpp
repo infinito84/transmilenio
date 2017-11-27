@@ -1,3 +1,6 @@
+using namespace std;
+using namespace rapidjson;
+
 double dices(){
 	return (double)rand()/(double)(RAND_MAX);
 }
@@ -22,4 +25,11 @@ char* readFile(char const * file){
 
 	fclose(fp);
 	return buffer;
+}
+
+void writeFile(char const * file, string content){
+	ofstream myfile;
+	myfile.open (file);
+	myfile << content;
+	myfile.close();
 }
