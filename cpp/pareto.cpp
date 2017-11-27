@@ -29,6 +29,7 @@ vector< vector<Solution*> > pareto(int g, vector<Solution*>& population){
 		population = si;
 		frontiers.push_back(no);
 		if(show){
+			show = false;
 			stringstream res, res2;
 			for(short k=0; k < no.size(); k++){
 				res << no[k]->objective1 << "\t" << no[k]->objective2 << "\n";
