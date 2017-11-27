@@ -1,14 +1,16 @@
 using namespace std;
 
-double objective2(Solution *solution, vector<Station*>& stations, Document& jsonPassengers){
-	vector<Passenger*> passengers = Passenger::loadPassengers(jsonPassengers);
+double objective2(Solution *solution, vector<Station*>& ss, vector<Passenger*>& pp){
+	vector<Station*> stations = Station::clone(ss);
+	vector<Passenger*> passengers = Passenger::clone(pp);
+	solution->update(stations);
+
 	vector<Bus*> buses;
 
 	for(short j=0; j<FLEET; j++){
 		buses.push_back(new Bus(solution->cromosomes[j % solution->n]));
 	}
-	for(short i=START; i<180; i++){
-		cout << i << endl;
+	for(short i=START; i<END; i++){
 		int to = 0;
 		for(int j=0; j<passengers.size(); j++){
 			if(passengers[j]->minute > i){
@@ -30,10 +32,15 @@ double objective2(Solution *solution, vector<Station*>& stations, Document& json
 		}
 	}
 	double total = 0;
+	int count = 0;
 	for(short j=0; j<buses.size(); j++){
-		total += (double)buses[j]->totalMinutes / (double) buses[j]->success;
+		if(buses[j]->totalMinutes > 0){
+			total += (double)buses[j]->totalMinutes;
+			count += buses[j]->success;
+		}
 	}
-	solution->objective2 = total / (double) buses.size();
+	cout << total << ": " << count << endl;
 
+	solution->objective2 = total;
 	return solution->objective2;
 }

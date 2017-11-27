@@ -36,7 +36,6 @@ Station *getStation(vector<Station*>& stations, string name){
 void Bus::calc(){
 	Station *station = route->stations[count];
 	Station *nextStation = route->stations[count+1];
-
 	if(minutes == 0){
 		if(route->adn[count]){
 			for(short i=passengers.size() - 1; i>=0; i--){
@@ -47,7 +46,7 @@ void Bus::calc(){
 					passengers.erase(passengers.begin() + i);
 				}
 			}
-			for(short i = station->passengers.size() - 1; i>=0; i--){
+			for(short i = station->passengers.size() - 1; i>=0 && n <= LIMIT; i--){
 				if(getStation(route->stations, station->passengers[i]->to) != NULL){
 					passengers.push_back(station->passengers[i]);
 					n++;
@@ -60,7 +59,7 @@ void Bus::calc(){
 		if(nextStation->time == minutes){
 			minutes = -1;
 			count++;
-			if(count == route->stations.size()){
+			if(count == route->stations.size() - 1){
 				for(short i=passengers.size() - 1; i>=0; i--){
 					totalMinutes += passengers[i]->time;
 				}

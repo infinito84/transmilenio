@@ -9,6 +9,7 @@ public:
 	short time;
 	Passenger(string a, string b, short t);
 	static vector<Passenger*> loadPassengers(Document& json);
+	static vector<Passenger*> clone(vector<Passenger*>& pp);
 };
 
 Passenger::Passenger(string a, string b, short t){
@@ -30,6 +31,14 @@ vector<Passenger*> Passenger::loadPassengers(Document& json){
 			passengers.push_back(new Passenger(a, b, t));
 		}
 		itr++;
+	}
+	return passengers;
+}
+
+vector<Passenger*> Passenger::clone(vector<Passenger*>& ss){
+	vector<Passenger*> passengers;
+	for(long i=0; i< ss.size(); i++){
+		passengers.push_back(new Passenger(ss[i]->from, ss[i]->to, ss[i]->minute));
 	}
 	return passengers;
 }

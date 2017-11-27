@@ -9,6 +9,7 @@ public:
 	Cromosome(int n);
 	Cromosome(Cromosome *cromosome);
 	string toString();
+	void update(vector<Station*> stations);
 };
 
 Cromosome::Cromosome(int num){
@@ -25,6 +26,17 @@ Cromosome::Cromosome(Cromosome *that){
 		adn[i] = dices() < 0.5;
 	}
 	adn[n] = dices() > MUTATION;
+}
+
+void Cromosome::update(vector<Station*> update){
+	for(short i=0; i<n;i++){
+		for(short j=0; j<update.size();j++){
+			if(stations[i]->id.compare(update[j]->id) == 0){
+				stations[i] = update[j];
+				break;
+			}
+		}
+	}
 }
 
 string Cromosome::toString(){

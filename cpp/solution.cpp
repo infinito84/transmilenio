@@ -11,6 +11,7 @@ public:
 	Solution(Document& jsonSolution, vector<Station*> stations);
 	Solution(Solution* solution);
 	string toString();
+	void update(vector<Station*> stations);
 };
 
 Solution::Solution(Document& jsonSolution, vector<Station*> stations){
@@ -35,6 +36,12 @@ Solution::Solution(Solution* solution){
 	n = solution->n;
 	for(short i=0; i< n; i++){
 		cromosomes.push_back(new Cromosome(solution->cromosomes[i]));
+	}
+}
+
+void Solution::update(vector<Station*> stations){
+	for(short i=0; i< n; i++){
+		cromosomes[i]->update(stations);
 	}
 }
 

@@ -8,9 +8,9 @@ public:
 	double time;
 	vector<Passenger*> passengers;
 	Station(string i, string n, double t);
-	Station(Station *station);
 	void sumTime();
 	static vector<Station*> loadStations(Document& trunks);
+	static vector<Station*> clone(vector<Station*>& ss);
 };
 
 Station::Station(string i, string n, double t){
@@ -34,6 +34,14 @@ vector<Station*> Station::loadStations(Document& trunks){
 		double t = itr->value["time"].GetDouble();
 		stations.push_back(new Station(i, n, t));
 		itr++;
+	}
+	return stations;
+}
+
+vector<Station*> Station::clone(vector<Station*>& ss){
+	vector<Station*> stations;
+	for(short i=0; i< ss.size(); i++){
+		stations.push_back(new Station(ss[i]->id, ss[i]->name, ss[i]->time));
 	}
 	return stations;
 }

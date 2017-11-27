@@ -30,23 +30,28 @@ int main() {
 
 	// Obtenemos pasajeros
 	jsonPassengers.Parse(readFile("../passengers.json"));
-	
+	vector<Passenger*> passengers = Passenger::loadPassengers(jsonPassengers);
+
 	// Obtenemos solución actual
 	jsonSolution.Parse(readFile("../solution.json"));
 	Solution *current = new Solution(jsonSolution, stations);
 	objective1(current);
-	objective2(current, stations, jsonPassengers);
+	objective2(current, stations, passengers);
+
 	// Creamos N individuos aleatorios (basados en solución actual)
 	// y calculamos fitness
 	vector<Solution*> population;
-	for(short i=0; i< POPULATION; i++){
-		population.push_back(new Solution(current));
-		objective1(population[i]);
+	#pragma omp parallel for
+	for(int l=0; l< POPULATION; l++){
+		Solution *s = new Solution(current);
+		objective1(s);
+		objective2(s, stations, passengers);
+		population.push_back(s);
 	}
 
 
     return 0;
 }
 
-// g++ main.cpp -o bin/main
+// g++ main.cpp -o bin/main -fopenmp
 // time ./bin/main
